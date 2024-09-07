@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: int_orders__pivoted
+    description: orders tied to payments pivoted by payment method
+    columns:
+      - name: order_id
+        description: order primary key 
+        data_tests:
+          - unique
+          - not_null
+      - name: bank_transfer_amount
+        description: dollars paid for this order via bank transfer
+      - name: coupon_amount
+        description: dollars paid for this order via coupon
+      - name: credit_card_amount
+        description: dollars paid for this order via credit card
+      - name: gift_card_amount
+        description: dollars paid for this order via gift card
+
+

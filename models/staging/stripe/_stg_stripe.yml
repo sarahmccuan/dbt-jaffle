@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_stripe__payments
+    description: staging data on stripe payments
+    columns:
+      - name: payment_id
+        data_tests:
+          - unique
+          - not_null
+      - name: order_id
+      - name: payment_method
+      - name: status
+      - name: amount_cents
+      - name: amount_dollars
+      - name: created_at

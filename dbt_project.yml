@@ -34,7 +34,10 @@ models:
     # Config indicated by + and applies to all files under models/example/
     staging:
       +materialized: view
+      +required_tests: {"unique.*|not_null": 1}
     marts:
       +materialized: table
+      +required_docs: true
+      +required_tests: {"unique.*|not_null": 1}
     utils:
       +materialized: view

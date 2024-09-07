@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: mart_orders
+    description: table for all the deets about orders
+    columns:
+      - name: order_id
+        description: unique pk per order 
+        data_tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: fk to customers table
+      - name: amount_paid
+        description: number of dollars (so far) for this order (less any refund payments)
