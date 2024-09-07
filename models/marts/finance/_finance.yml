@@ -9,6 +9,9 @@ models:
         data_tests:
           - unique
           - not_null
+          - relationships:
+              to: ref('stg_jaffle_shop__orders')
+              field: order_id
       - name: customer_id
         description: fk to customers table
       - name: amount_paid

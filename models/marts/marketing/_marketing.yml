@@ -9,6 +9,9 @@ models:
         data_tests:
           - unique
           - not_null
+          - relationships:
+              to: ref('stg_jaffle_shop__customers')
+              field: customer_id
       - name: first_name
         description: customer first name from our application database
       - name: last_name

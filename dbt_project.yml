@@ -38,6 +38,8 @@ models:
     marts:
       +materialized: table
       +required_docs: true
-      +required_tests: {"unique.*|not_null": 1}
+      +required_tests: 
+        "unique.*|not_null": 1
+        "relationship.*": 1
     utils:
       +materialized: view

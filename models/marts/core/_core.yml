@@ -9,6 +9,9 @@ models:
         data_tests:
           - unique
           - not_null
+          - relationships:
+              to: ref('stg_jaffle_shop__orders')
+              field: order_id
       - name: bank_transfer_amount
         description: dollars paid for this order via bank transfer
       - name: coupon_amount
